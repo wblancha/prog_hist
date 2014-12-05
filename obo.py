@@ -19,3 +19,6 @@ def stripTags(pagecontents):
         else:
             text += char
     return text      
+def stripNonAlphaNum(text):
+    import re
+    return re.compile(r'\W+', re.UNICODE).split(text)
